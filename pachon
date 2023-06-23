@@ -1,0 +1,26 @@
+小楚
+实例开发与踩坑总结
+踩坑总结：
+         IDE : Pycharm
+
+         需要安装requests库。 解决方法： win+r 输入 cmd。在命令行输入 : pip install requests。
+
+         导入Pycharm（！坑）。之前安装好了requests库，但是在Pycharm中依旧无法运行，报错显示没有requests库。
+
+         解决方法：可能是没有导入该库。在File - Setting - Project Interpreter 中导入requests库。如下图中所示。导入成功之后开始正常启动运行。
+
+ 
+
+开发实例：
+ 
+Python爬虫入门——第一个爬虫实例_python
+
+开发过程：
+第一步，获取目标数据
+首先我们定义获取的网页url
+
+url = 'https://www.xs4.cc/dushizhiwozhendewudi/'
+response  = requests.get(url)
+#目标小说主页源码
+html = response.text
+然而此时print(html)
